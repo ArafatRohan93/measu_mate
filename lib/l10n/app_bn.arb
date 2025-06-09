@@ -1,0 +1,14 @@
+{
+  "appTitle": "মেজু মেট",
+  "login": "সাইন ইন",
+  "email": "ইমেইল:",
+  "enterEmail": "আপনার ইমেইল লিখুন",
+  "password": "পাসওয়ার্ড:",
+  "enterPassword": "আপনার পাসওয়ার্ড লিখুন",
+  "forgotPassword": "পাসওয়ার্ড ভুলে গেছেন?",
+  "signInWithGoogle": "গুগল দিয়ে সাইন ইন করুন",
+  "dontHaveAccount": "একাউন্ট নেই?",
+  "signUp": "সাইন আপ",
+  "smartConstruction": "স্মার্ট কনস্ট্রাকশন কস্ট এস্টিমেশন",
+  "or": "অথবা"
+} 
