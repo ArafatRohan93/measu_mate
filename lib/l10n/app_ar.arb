@@ -1,0 +1,44 @@
+{
+  "appTitle": "Measu Mate",
+  "login": "تسجيل الدخول",
+  "email": "البريد الإلكتروني:",
+  "enterEmail": "أدخل بريدك الإلكتروني",
+  "password": "كلمة المرور:",
+  "enterPassword": "أدخل كلمة المرور",
+  "forgotPassword": "نسيت كلمة المرور؟",
+  "signInWithGoogle": "تسجيل الدخول باستخدام Google",
+  "dontHaveAccount": "ليس لديك حساب؟",
+  "signUp": "إنشاء حساب",
+  "smartConstruction": "تقدير تكلفة البناء الذكي",
+  "or": "أو",
+  "createAccount": "إنشاء حسابك",
+  "createAccountSubtitle": "ابدأ في تقدير تكاليف البناء بدقة",
+  "fullName": "الاسم الكامل",
+  "enterFullName": "أدخل اسمك الكامل",
+  "phoneNumber": "رقم الهاتف",
+  "enterPhoneNumber": "أدخل رقم الهاتف",
+  "createPassword": "إنشاء كلمة مرور",
+  "signUpWithGoogle": "إنشاء حساب باستخدام Google",
+  "bySigningUp": "بالتسجيل، فإنك توافق على ",
+  "termsOfService": "شروط الخدمة",
+  "and": "و",
+  "privacyPolicy": "سياسة الخصوصية",
+  "alreadyHaveAccount": "لديك حساب بالفعل؟",
+  "signIn": "تسجيل الدخول",
+  
+  "availableSpecialists": "المتخصصون المتاحون",
+  "watchAdForCoins": "شاهد الإعلان لكسب العملات",
+  "failedToLoadSpecialists": "فشل تحميل المتخصصين",
+  "failedToLoadProjects": "فشل تحميل المشاريع",
+  "hi": "مرحباً، {name}",
+  "@hi": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "projects": "المشاريع",
+  "home": "الرئيسية",
+  "convert": "تحويل"
+} 

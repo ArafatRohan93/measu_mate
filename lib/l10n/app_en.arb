@@ -24,5 +24,21 @@
   "and": "and",
   "privacyPolicy": "Privacy Policy",
   "alreadyHaveAccount": "Already have an account?",
-  "signIn": "Sign In"
+  "signIn": "Sign In",
+  
+  "availableSpecialists": "Available Specialist",
+  "watchAdForCoins": "Watch add for earning coins",
+  "failedToLoadSpecialists": "Failed to load specialists",
+  "failedToLoadProjects": "Failed to load projects",
+  "hi": "Hi, {name}",
+  "@hi": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "projects": "Projects",
+  "home": "Home",
+  "convert": "Convert"
 } 

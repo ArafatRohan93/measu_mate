@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:measu_mate/core/utils/context_localization.dart';
 
 import '../../../../core/colors/app_colors.dart';
 import '../../../../core/di/di.dart';
@@ -29,7 +30,7 @@ class HomeScreen extends StatelessWidget {
                     const SizedBox(height: 16),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                      child: Text('Available Specialist',
+                      child: Text(context.l10n.availableSpecialists,
                           style: AppTextStyles.h4Bold
                               .copyWith(color: AppColors.blackBlueDark)),
                     ),
@@ -61,7 +62,7 @@ class HomeScreen extends StatelessWidget {
                                       BoxShadow(
                                         color: AppColors.grayLight
                                             .withOpacity(0.2),
-                                        blurRadius: 8,
+                                        blurRadius: 16,
                                         offset: const Offset(0, 2),
                                       ),
                                     ],
@@ -90,8 +91,9 @@ class HomeScreen extends StatelessWidget {
                               },
                             );
                           } else if (state is SpecialistFailure) {
-                            return const Center(
-                                child: Text('Failed to load specialists'));
+                            return Center(
+                                child:
+                                    Text(context.l10n.failedToLoadSpecialists));
                           }
                           return const SizedBox.shrink();
                         },
@@ -111,7 +113,7 @@ class HomeScreen extends StatelessWidget {
                           children: [
                             Expanded(
                               child: Text(
-                                'Watch add for earning coins',
+                                context.l10n.watchAdForCoins,
                                 style: AppTextStyles.h5Medium
                                     .copyWith(color: AppColors.blackBlueDark),
                               ),
@@ -232,7 +234,8 @@ class HomeScreen extends StatelessWidget {
                             }).toList(),
                           );
                         } else if (state is ProjectFailure) {
-                          return Center(child: Text('Failed to load projects'));
+                          return Center(
+                              child: Text(context.l10n.failedToLoadProjects));
                         }
                         return const SizedBox.shrink();
                       },
@@ -244,7 +247,7 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
         ),
-        bottomNavigationBar: _HomeBottomNavBar(),
+        bottomNavigationBar: const _HomeBottomNavBar(),
       ),
     );
   }
@@ -269,7 +272,7 @@ class _HomeSliverAppBar extends StatelessWidget {
             children: [
               const Icon(Icons.menu, size: 28, color: AppColors.blackBlueDark),
               const SizedBox(width: 12),
-              Text('Hi, Yousuf',
+              Text(context.l10n.hi('Yousuf'),
                   style: AppTextStyles.h4Bold
                       .copyWith(color: AppColors.blackBlueDark)),
               const Spacer(),
@@ -290,23 +293,25 @@ class _HomeSliverAppBar extends StatelessWidget {
 }
 
 class _HomeBottomNavBar extends StatelessWidget {
+  const _HomeBottomNavBar();
+
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       currentIndex: 1,
       onTap: (index) {},
-      items: const [
+      items: [
         BottomNavigationBarItem(
-          icon: Icon(Icons.build_outlined),
-          label: 'Projects',
+          icon: const Icon(Icons.build_outlined),
+          label: context.l10n.projects,
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.home, color: AppColors.orange),
-          label: 'Home',
+          icon: const Icon(Icons.home, color: AppColors.orange),
+          label: context.l10n.home,
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.calculate_outlined),
-          label: 'Convert',
+          icon: const Icon(Icons.calculate_outlined),
+          label: context.l10n.convert,
         ),
       ],
       selectedItemColor: AppColors.orange,
