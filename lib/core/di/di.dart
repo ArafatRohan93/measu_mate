@@ -1,4 +1,8 @@
 import 'package:get_it/get_it.dart';
+import 'package:measu_mate/features/consultant/data/datasources/consultant_remote_data_source.dart';
+import 'package:measu_mate/features/consultant/data/repositories/consultant_repository_impl.dart';
+import 'package:measu_mate/features/consultant/domain/repositories/consultant_repository.dart';
+import 'package:measu_mate/features/consultant/presentation/bloc/consultant_details_bloc/consultant_details_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../features/auth/data/datasources/auth_remote_data_source.dart';
 import '../../features/auth/data/repositories/auth_repository_impl.dart';
@@ -19,6 +23,11 @@ import '../../features/home/domain/usecases/get_specialists_usecase.dart';
 import '../../features/home/domain/usecases/get_projects_usecase.dart';
 import '../../features/home/presentation/cubit/specialist_cubit.dart';
 import '../../features/home/presentation/cubit/project_cubit.dart';
+// Consultants List
+import 'package:measu_mate/features/consultant/data/datasources/consultant_list_remote_data_source.dart';
+import 'package:measu_mate/features/consultant/data/repositories/consultant_list_repository_impl.dart';
+import 'package:measu_mate/features/consultant/domain/repositories/consultant_list_repository.dart';
+import 'package:measu_mate/features/consultant/presentation/bloc/consultants_list_bloc/consultants_bloc.dart';
 
 final sl = GetIt.instance;
 
@@ -55,4 +64,18 @@ Future<void> initDependencies() async {
       () => ProjectRepositoryImpl(sl()));
   sl.registerLazySingleton(() => GetProjectsUseCase(sl()));
   sl.registerFactory(() => ProjectCubit(sl()));
+
+  // Consultant Details
+  sl.registerLazySingleton<ConsultantRemoteDataSource>(
+      () => ConsultantRemoteDataSourceImpl());
+  sl.registerLazySingleton<ConsultantRepository>(
+      () => ConsultantRepositoryImpl(sl()));
+  sl.registerFactory(() => ConsultantDetailsBloc(sl()));
+
+  // Consultants List
+  sl.registerLazySingleton<ConsultantListRemoteDataSource>(
+      () => ConsultantListRemoteDataSourceImpl());
+  sl.registerLazySingleton<ConsultantListRepository>(
+      () => ConsultantListRepositoryImpl(sl()));
+  sl.registerFactory(() => ConsultantsBloc(sl()));
 }

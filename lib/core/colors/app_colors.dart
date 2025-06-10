@@ -30,6 +30,7 @@ class AppColors {
   static const Color orangeDark = Color(0xFFF97216);
   static const Color orangeDeep = Color(0xFFFF682C);
   static const Color gold = Color(0xFFC4A804);
+  static const Color goldLight = Color(0xFFFFD176);
 
   // Blues
   static const Color blueExtraLight = Color(0xFF94E4FF);
@@ -87,4 +88,4 @@ class AppColors {
   static const Color blackLight = Color(0xFF1A1A1A);
   static const Color blackMedium = Color(0xFF202020);
   static const Color pureBlack = Color(0xFF000000);
-} 
+}

@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:measu_mate/features/home/presentation/pages/base_screen.dart';
 import 'package:measu_mate/features/home/presentation/pages/home_screen.dart';
 
 import '../../features/auth/presentation/pages/login_screen.dart';
@@ -22,7 +23,7 @@ final GoRouter appRouter = GoRouter(
     ),
     GoRoute(
       path: '/home',
-      builder: (context, state) => const HomeScreen(),
+      builder: (context, state) => const BaseScreen(tab: BaseScreenTab.home),
     ),
   ],
 );

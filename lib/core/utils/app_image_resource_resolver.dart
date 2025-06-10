@@ -6,4 +6,7 @@ class AppImageResourceResolver {
 
   static PNGImageResourceResolver get engineerPNG =>
       const PNGImageResourceResolver('assets/images/engineer.png');
+
+  static PNGImageResourceResolver get projectPNG =>
+      const PNGImageResourceResolver('assets/images/project.png');
 }
