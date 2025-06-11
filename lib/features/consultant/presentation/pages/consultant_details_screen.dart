@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:measu_mate/core/colors/app_colors.dart';
 import 'package:measu_mate/core/styles/app_text_styles.dart';
-import 'package:measu_mate/features/consultant/domain/entities/consultant_details.dart';
 import 'package:measu_mate/features/consultant/presentation/bloc/consultant_details_bloc/consultant_details_bloc.dart';
 import 'package:measu_mate/features/consultant/presentation/bloc/consultant_details_bloc/consultant_details_state.dart';
 import 'package:shimmer/shimmer.dart';
@@ -86,7 +85,7 @@ class ConsultantDetailsScreen extends StatelessWidget {
                           ],
                         ),
                         const SizedBox(height: 24),
-                        _SectionTitle(
+                        const _SectionTitle(
                           icon: Icons.school_rounded,
                           title: 'Education',
                         ),
@@ -104,7 +103,7 @@ class ConsultantDetailsScreen extends StatelessWidget {
                               ),
                             )),
                         const SizedBox(height: 20),
-                        _SectionTitle(
+                        const _SectionTitle(
                           icon: Icons.folder_copy_rounded,
                           title: 'Areas of Expertise',
                         ),
@@ -128,7 +127,7 @@ class ConsultantDetailsScreen extends StatelessWidget {
                         const SizedBox(height: 20),
                         Row(
                           children: [
-                            _SectionTitle(
+                            const _SectionTitle(
                               icon: Icons.folder_copy_rounded,
                               title: 'Recent Projects',
                             ),
@@ -177,7 +176,7 @@ class ConsultantDetailsScreen extends StatelessWidget {
                               ),
                             )),
                         const SizedBox(height: 20),
-                        _SectionTitle(
+                        const _SectionTitle(
                           icon: Icons.calendar_month,
                           title: 'Available Time Slots',
                         ),
@@ -296,7 +295,7 @@ class _ConsultantDetailsShimmer extends StatelessWidget {
               Container(
                   width: 76,
                   height: 76,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       color: Colors.white, shape: BoxShape.circle)),
               const SizedBox(width: 16),
               Expanded(
