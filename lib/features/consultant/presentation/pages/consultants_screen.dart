@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:measu_mate/core/colors/app_colors.dart';
-import 'package:measu_mate/core/routes/app_router.dart';
 import 'package:measu_mate/core/styles/app_text_styles.dart';
 import 'package:measu_mate/features/consultant/domain/entities/consultant.dart';
 import 'package:measu_mate/features/consultant/presentation/bloc/consultant_details_bloc/consultant_details_bloc.dart';
